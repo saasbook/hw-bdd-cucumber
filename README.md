@@ -1,7 +1,6 @@
 BDD and Cucumber
 ================
 
-<div class="problem" id="part1">
 
 In this homework you will create user stories to describe a feature of a SaaS app, use the Cucumber tool to turn those stories into executable acceptance tests, and run the tests against your SaaS app.  
 
@@ -98,5 +97,3 @@ archive. For example, unarchiving your submission should create a
 directory named `features` in the current working directory. It should
 not extract all your features directly into the current working
 directory. 
-
-</div>
