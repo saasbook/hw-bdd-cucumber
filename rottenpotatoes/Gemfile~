@@ -17,13 +17,11 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'rspec-rails'
-  
-end
-
   gem 'activeresource'
   gem 'protected_attributes'
   gem 'rails-observers'
   gem 'activerecord-deprecated_finders'
+end
 
 group :test do
   gem 'cucumber', '2.0.0'
