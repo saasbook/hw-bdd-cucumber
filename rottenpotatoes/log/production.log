@@ -1,0 +1,103 @@
+Started GET "/movies/" for 127.0.0.1 at 2015-07-09 19:40:45 -0300
+Processing by MoviesController#index as HTML
+SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (29.6ms)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 7.4ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie|
+    22:       %tr
+    23:         %td= movie.title 
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml__634103313_80541330'
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2015-07-09 19:40:52 -0300
+Started GET "/movies" for 127.0.0.1 at 2015-07-09 19:40:57 -0300
+Processing by MoviesController#index as HTML
+SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie|
+    22:       %tr
+    23:         %td= movie.title 
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml__634103313_80541330'
+
+
+Started GET "/movies" for 127.0.0.1 at 2015-07-09 19:44:30 -0300
+Processing by MoviesController#index as HTML
+SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (30.0ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 7.6ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie|
+    22:       %tr
+    23:         %td= movie.title 
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml___718186138_74948620'
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2015-07-09 19:44:36 -0300
+Started GET "/assets/rails.png" for 127.0.0.1 at 2015-07-09 19:44:38 -0300
+Started GET "/movies/" for 127.0.0.1 at 2015-07-09 19:44:41 -0300
+Processing by MoviesController#index as HTML
+SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie|
+    22:       %tr
+    23:         %td= movie.title 
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml___718186138_74948620'
+
+
+Started GET "/movies/" for 127.0.0.1 at 2015-07-09 19:47:46 -0300
+Processing by MoviesController#index as HTML
+SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (26.3ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 8.0ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie|
+    22:       %tr
+    23:         %td= movie.title 
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml___227711426_84775490'
+
+
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.9ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/saasbook/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.7ms)
+Migrating to CreateMovies (20111119180638)
+Started GET "/movies/" for 127.0.0.1 at 2015-07-09 19:48:57 -0300
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.haml within layouts/application (22.2ms)
+Completed 200 OK in 61ms (Views: 25.4ms | ActiveRecord: 4.9ms)
+Started GET "/assets/application-6c5c8e9af05174adb09a79766aceadb37217805752b6205638ce8b68dfb909cc.css" for 127.0.0.1 at 2015-07-09 19:48:57 -0300
+Started GET "/assets/application-2221ca6f8b917b8bf6e628442a9b0246011ae72f97df6edcf6e48956ad29e9b0.js" for 127.0.0.1 at 2015-07-09 19:48:57 -0300
+Started GET "/movies/" for 127.0.0.1 at 2015-07-09 19:49:57 -0300
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.haml within layouts/application (78.4ms)
+Completed 200 OK in 145ms (Views: 92.6ms | ActiveRecord: 8.4ms)

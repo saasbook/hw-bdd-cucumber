@@ -11,27 +11,22 @@ gem 'rails', '4.2.1'
 
 group :development, :test do
   gem 'sqlite3'
-  #not compatible with Ruby 2.0
-  #gem 'debugger'
-  gem 'database_cleaner'
-  gem 'capybara'
   gem 'launchy'
-  gem 'rspec-rails'
-  
+  gem 'rspec-rails', '3.3.2'
+  gem 'capybara', '2.4.4'
+  gem 'database_cleaner', '1.4.1'
+  gem 'ZenTest', '4.11.0'
 end
 
-  gem 'activeresource'
   gem 'protected_attributes'
   gem 'rails-observers'
-  gem 'activerecord-deprecated_finders'
 
 group :test do
   gem 'cucumber', '2.0.0'
   gem 'cucumber-rails'
-  gem 'cucumber-rails-training-wheels'
 end
 group :production do
-#  gem 'pg'
+  gem 'pg'
 end
 
 # Gems used only for assets and not required
