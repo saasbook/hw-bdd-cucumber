@@ -6,14 +6,12 @@ Rottenpotatoes::Application.configure do
   # your test database is "scratch space" for the test suite and is wiped
   # and recreated between test runs.  Don't rely on the data there!
   config.cache_classes = true
-  
+
   # Configure static asset server for tests with Cache-Control for performance
   config.serve_static_assets = true
   config.static_cache_control = "public, max-age=3600"
-  
-  #no longer valid in rails 4
-  # Log error messages when you accidentally call methods on nil
-  #config.whiny_nils = true
+  config.eager_load = false
+
 
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
@@ -29,9 +27,6 @@ Rottenpotatoes::Application.configure do
   # The :test delivery method accumulates sent emails in the
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
-  
-  #removed with upgrade to rails 4
-  #config.active_record.whitelist_attributes=true
 
   # Use SQL instead of Active Record's schema dumper when creating the test database.
   # This is necessary if your schema can't be completely dumped by the schema dumper,
@@ -43,6 +38,4 @@ Rottenpotatoes::Application.configure do
 
   # Allow pass debug_assets=true as a query parameter to load pages with unpackaged assets
   config.assets.allow_debugging = true
-
-  config.eager_load=false
 end
