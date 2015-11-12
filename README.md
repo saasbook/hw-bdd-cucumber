@@ -98,7 +98,7 @@ To submit your assignment, please submit a `.tar.gz` compressed archive
 file containing just your `features` directory. The command for doing
 this in a UNIX environment, from your app's root directory, is:
 
-`tar -zcf features.tar.gz features/`
+`zip -r features.zip features`
 
 Please make sure that the `features` directory is contained in the
 archive. For example, unarchiving your submission should create a
