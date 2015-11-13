@@ -8,7 +8,7 @@ Specifically, you will write Cucumber scenarios that test the happy
 paths of parts 1-3 of the Rails Intro homework, in which you added
 filtering and sorting to RottenPotatoes' `index` view for Movies.
 
-The app code in `public/app` contains a "canonical" solution to the
+The app code in `rottenpotatoes` contains a "canonical" solution to the
 Rails Intro homework against which to write your scenarios, and the
 necessary scaffolding for the first couple of scenarios. 
 
