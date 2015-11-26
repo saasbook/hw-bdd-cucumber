@@ -94,7 +94,7 @@ Update: You no longer need to implement the scenario for no ratings selected.
 
 **Submission**
 
-To submit your assignment, please submit a `.tar.gz` compressed archive
+To submit your assignment, please submit a `.zip` compressed archive
 file containing just your `features` directory. The command for doing
 this in a UNIX environment, from your app's root directory, is:
 
