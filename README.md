@@ -63,7 +63,7 @@ existing steps in  `web_steps.rb` , as shown in the example in Section
 
 3. For the scenario `all ratings selected`, it would be tedious to use `And I should see` to name every single movie. That would detract from the goal of BDD to convey the behavioral intent of the user story. To fix this, create step definitions that will match steps of the form: 
 `Then I should see all of the movies` in `movie_steps.rb`. 
-HINT: Consider counting the number of rows in the table to implement these steps. If you have computed rows as the number of table rows, you can use the assertion 
+HINT: Consider counting the number of rows in the HTML table to implement these steps. If you have computed rows as the number of table rows, you can use the assertion 
 `rows.should == value`
 to fail the test in case the values don't match.
 Update: You no longer need to implement the scenario for no ratings selected.
