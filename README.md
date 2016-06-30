@@ -24,8 +24,8 @@ We recommend
 that you do a `git commit` as you get each part working.  As an optional
 additional help, git allows you to associate tags---symbolic
 names---with particular commits.  For example, immediately after doing a
-commit, you could say `git tag hw3-part1b` , and thereafter you could
-use `git diff hw3-part1b` to see differences since that commit, rather
+commit, you could say `git tag hw4-part1b` , and thereafter you could
+use `git diff hw4-part1b` to see differences since that commit, rather
 than remembering its commit ID.  Note that after creating a tag in your
 local repo, you need to say `git push origin --tags` to push the tags to
 a remote.  (Tags are ignored by deployment remotes such as Heroku, so
@@ -72,7 +72,7 @@ existing steps in  `web_steps.rb` , as shown in the example in Section
 3. For the scenario `all ratings selected`, it would be tedious to use `And I should see` to name every single movie. That would detract from the goal of BDD to convey the behavioral intent of the user story. To fix this, create step definitions that will match steps of the form: 
 `Then I should see all of the movies` in `movie_steps.rb`. 
 HINT: Consider counting the number of rows in the HTML table to implement these steps. If you have computed rows as the number of table rows, you can use the assertion 
-`rows.should == value`
+`expect(rows).to eq value`
 to fail the test in case the values don't match.
 Update: You no longer need to implement the scenario for no ratings selected.
 
@@ -106,7 +106,9 @@ To submit your assignment, please submit a `.zip` compressed archive
 file containing just your `features` directory. The command for doing
 this in a UNIX environment, from your app's root directory, is:
 
-`zip -r features.zip features`
+```sh
+$ zip -r features.zip features
+```
 
 Please make sure that the `features` directory is contained in the
 archive. For example, unarchiving your submission should create a
