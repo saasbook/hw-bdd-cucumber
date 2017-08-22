@@ -27,9 +27,16 @@ names---with particular commits.  For example, immediately after doing a
 commit, you could say `git tag hw4-part1b` , and thereafter you could
 use `git diff hw4-part1b` to see differences since that commit, rather
 than remembering its commit ID.  Note that after creating a tag in your
-local repo, you need to say `git push origin --tags` to push the tags to
-a remote.  (Tags are ignored by deployment remotes such as Heroku, so
-there's no point in pushing tags there.) 
+local repo, you need to say `git push YOUR_REMOTE --tags` to push the tags to
+your remote. See 'add' in the [git-remote man page](https://git-scm.com/docs/git-remote)
+for how to add remotes. (Tags are ignored by deployment remotes such as Heroku,
+so there's no point in pushing tags there.)
+
+> NOTE: Pushing your homework to a public repo is against the edX Honor Code.
+Unless you have GitHub premium service which allows private repositories, you should
+use some other code host for this such as [notabug](https://notabug.org/), 
+[gitlab](https://gitlab.com/), or [bitbucket](https://bitbucket.org/) 
+and be sure that your repo is private.
 
 **Part 1: Create a declarative scenario step for adding movies**
 
