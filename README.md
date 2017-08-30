@@ -18,7 +18,7 @@ Fork this repo to your GitHub account, then clone the fork to your
 development environment:
 
 ```sh
-$ git clone git@github.com:your_github_username/hw-bdd-cucumber
+$ git clone git@github.com:your_github_username/hw-bdd-cucumber.git
 ```
 
 We recommend
