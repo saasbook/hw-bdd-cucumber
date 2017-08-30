@@ -14,10 +14,11 @@ The app code in `rottenpotatoes` contains a "canonical" solution to the
 Rails Intro assignment against which to write your scenarios, and the
 necessary scaffolding for the first couple of scenarios. 
 
-Clone this repo to your C9 instance or local machine:
+Fork this repo to your GitHub account, then clone the fork to your
+development environment:
 
 ```sh
-$ git clone https://github.com/saasbook/hw-bdd-cucumber
+$ git clone https://github.com/your_github_username/hw-bdd-cucumber
 ```
 
 We recommend
