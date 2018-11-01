@@ -2,26 +2,42 @@ BDD and Cucumber
 ================
 
 
-In this homework you will create user stories to describe a feature of a SaaS app, use the Cucumber tool to turn those stories into executable acceptance tests, and run the tests against your SaaS app.  
+In this assignment you will create user stories to describe a feature of a 
+SaaS app, use the Cucumber tool to turn those stories into executable 
+acceptance tests, and run the tests against your SaaS app.  
 
 Specifically, you will write Cucumber scenarios that test the happy
-paths of parts 1-3 of the Rails Intro homework, in which you added
+paths of parts 1-3 of the Rails Intro assignment, in which you added
 filtering and sorting to RottenPotatoes' `index` view for Movies.
 
 The app code in `rottenpotatoes` contains a "canonical" solution to the
-Rails Intro homework against which to write your scenarios, and the
+Rails Intro assignment against which to write your scenarios, and the
 necessary scaffolding for the first couple of scenarios. 
 
-Create a repo and start by pushing this skeleton to it. We recommend
+Fork this repo to your GitHub account, then clone the fork to your
+development environment:
+
+```sh
+$ git clone git@github.com:your_github_username/hw-bdd-cucumber.git
+```
+
+We recommend
 that you do a `git commit` as you get each part working.  As an optional
 additional help, git allows you to associate tags---symbolic
 names---with particular commits.  For example, immediately after doing a
-commit, you could say `git tag hw3-part1b` , and thereafter you could
-use `git diff hw3-part1b` to see differences since that commit, rather
+commit, you could say `git tag hw4-part1b` , and thereafter you could
+use `git diff hw4-part1b` to see differences since that commit, rather
 than remembering its commit ID.  Note that after creating a tag in your
-local repo, you need to say `git push origin --tags` to push the tags to
-a remote.  (Tags are ignored by deployment remotes such as Heroku, so
-there's no point in pushing tags there.) 
+local repo, you need to say `git push YOUR_REMOTE --tags` to push the tags to
+your remote. See 'add' in the [git-remote man page](https://git-scm.com/docs/git-remote)
+for how to add remotes. (Tags are ignored by deployment remotes such as Heroku,
+so there's no point in pushing tags there.)
+
+> NOTE: Pushing your homework to a public repo is against the edX Honor Code.
+Unless you have GitHub premium service which allows private repositories, you should
+use some other code host for this such as [notabug](https://notabug.org/), 
+[gitlab](https://gitlab.com/), or [bitbucket](https://bitbucket.org/) 
+and be sure that your repo is private.
 
 **Part 1: Create a declarative scenario step for adding movies**
 
@@ -63,8 +79,8 @@ existing steps in  `web_steps.rb` , as shown in the example in Section
 
 3. For the scenario `all ratings selected`, it would be tedious to use `And I should see` to name every single movie. That would detract from the goal of BDD to convey the behavioral intent of the user story. To fix this, create step definitions that will match steps of the form: 
 `Then I should see all of the movies` in `movie_steps.rb`. 
-HINT: Consider counting the number of rows in the table to implement these steps. If you have computed rows as the number of table rows, you can use the assertion 
-`rows.should == value`
+HINT: Consider counting the number of rows in the HTML table to implement these steps. If you have computed rows as the number of table rows, you can use the assertion 
+`expect(rows).to eq value`
 to fail the test in case the values don't match.
 Update: You no longer need to implement the scenario for no ratings selected.
 
@@ -98,7 +114,9 @@ To submit your assignment, please submit a `.zip` compressed archive
 file containing just your `features` directory. The command for doing
 this in a UNIX environment, from your app's root directory, is:
 
-`zip -r features.zip features`
+```sh
+$ zip -r features.zip features
+```
 
 Please make sure that the `features` directory is contained in the
 archive. For example, unarchiving your submission should create a
