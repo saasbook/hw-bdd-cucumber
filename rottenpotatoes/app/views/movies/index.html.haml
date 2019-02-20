@@ -1,5 +1,5 @@
 -#  This file is app/views/movies/index.html.haml
-%h1 All Movies
+%h2 All Movies
 
 = form_tag movies_path, :method => :get, :id => 'ratings_form' do
   = hidden_field_tag "title_sort", true if @title_header
@@ -10,7 +10,7 @@
     = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), :id => "ratings_#{rating}"
   = submit_tag 'Refresh', :id => 'ratings_submit'
 
-%table#movies
+%table.table-striped.col-md-5#movies
   %thead
     %tr
       %th{:class => @title_header}= link_to 'Movie Title', movies_path(:sort => 'title', :ratings => @selected_ratings), :id => 'title_header'
