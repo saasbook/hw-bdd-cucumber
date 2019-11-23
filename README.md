@@ -165,7 +165,7 @@ all steps should turn green for Passing,
 which gives Cucumber its name.
 
 
-# Part 2: Create a declarative scenario step for adding movies**
+# Part 2: Create a declarative scenario step for adding movies
 
 The goal of BDD is to express behavioral tasks rather than low-level operations.  
 
@@ -192,7 +192,7 @@ not what these scenarios are testing.
 `filter_movie_list.feature` and `sort_movie_list.feature` are passing
 Green. 
 
-# Part 3: Happy paths for filtering movies**
+# Part 3: Happy paths for filtering movies
 
 1. Complete the scenario `restrict to movies with "PG" or "R" ratings` in `filter_movie_list.feature`. You can use existing step definitions in `web_steps.rb` to check and uncheck the appropriate boxes, submit the form, and check whether the correct movies appear (and just as importantly, movies with unselected ratings do not appear).
 
@@ -218,7 +218,7 @@ selected`.
 
 **SUCCESS** is when all scenarios in `filter_movie_list.feature` pass with all steps green.
 
-# Part 4: Happy paths for sorting movies by title and by release date**
+# Part 4: Happy paths for sorting movies by title and by release date
 
 1. Since the scenarios in `sort_movie_list.feature` involve sorting, you will need the ability to have steps that test whether one movie appears before another in the output listing. Create a step definition that matches a step such as 
 `Then I should see "Aladdin" before "Amelie"`
