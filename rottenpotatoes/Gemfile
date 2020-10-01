@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
-gem 'rails', '4.2.6'
+ruby '2.4.0'
+gem 'rails', '4.2.10'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
@@ -13,6 +13,8 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'rspec-rails'
+  gem 'pry'
+  gem 'pry-byebug'
 end
 
 group :test do
