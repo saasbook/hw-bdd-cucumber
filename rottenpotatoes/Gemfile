@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-ruby '2.4.0'
+ruby '~> 2.6.0'
 gem 'rails', '4.2.10'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
-  gem 'sqlite3'
+  gem 'sqlite3', '> 1.4.0'
   gem 'byebug'
   gem 'database_cleaner'
   gem 'capybara'
@@ -18,7 +18,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'cucumber-rails' 
+  gem 'cucumber-rails', require: false
   gem 'cucumber-rails-training-wheels'
 end
 group :production do
