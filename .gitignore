@@ -3,3 +3,6 @@ rottenpotatoes/db/*.sqlite3
 rottenpotatoes/log/
 rottenpotatoes/tmp/
 rottenpotatoes/vendor/bundle
+rottenpotatoes/.byebug_history
+rottenpotatoes/Gemfile.lock
+.bundle/
