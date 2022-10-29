@@ -4,8 +4,13 @@ Given /the following movies exist/ do |movies_table|
   movies_table.hashes.each do |movie|
     # each returned element will be a hash whose key is the table header.
     # you should arrange to add that movie to the database here.
+    @t = movie["title"]
+    @r = movie["rating"]
+    @rd = movie["release_date"]
+
+    Movie.create("title":@t, "rating":@r)
   end
-  fail "Unimplemented"
+  #fail "Unimplemented"
 end
 
 Then /(.*) seed movies should exist/ do | n_seeds |
