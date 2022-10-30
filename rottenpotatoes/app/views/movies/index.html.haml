@@ -1,37 +1,68 @@
 -#  This file is app/views/movies/index.html.haml
-%h2 All Movies
 
-= form_tag movies_path, :method => :get, :id => 'ratings_form' do
-  = hidden_field_tag "title_sort", true if @title_header
-  = hidden_field_tag ":release_date_sort", true if @date_header
-  Include:
-  - @all_ratings.each do |rating|
-    = rating
-    = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), :id => "ratings_#{rating}"
-  = submit_tag 'Refresh', :id => 'ratings_submit', :class => 'btn btn-primary'
+//<% if current_user %>
+/<h2><%= current_user.email %></h2>
+/<%= link_to "Edit Account" , edit_moviegoer_registration_path %>
+/<%= button_to "Logout",destroy_moviegoer_session_path, data: {turbo: "false"}, method: :delete %>
+/<% else %>
+/<%= link_to "Login", new_moviegoer_session_path %>
+//<%= link_to "Create Account", new_moviegoer_registration_path %>
+//<% end %>
+/= link_to 'Add new movie', new_movie_path
 
-%table#movies.table.table-striped.col-md-12
-  %thead
-    %tr
-      %th{:class => @title_header}= link_to 'Movie Title', movies_path(:sort => 'title', :ratings => @selected_ratings), :id => 'title_header'
-      %th Rating
-      %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
-      %th More Info
-  %tbody
-    - @movies.each do |movie|
-      %tr
-        %td= movie.title
-        %td= movie.rating
-        %td= movie.release_date
-        %td= link_to "More about #{movie.title}", movie_path(movie)
-
-= link_to 'Add new movie', new_movie_path
-
-%h1 Search TMDb for a movie
-
-= form_tag :action => 'search_tmdb' do
-
-  %label{:for => 'search_terms'} Search Terms
-  = text_field_tag 'search_terms'
-  = submit_tag 'Search TMDb'
+- if current_moviegoer 
+  =image_tag asset_path(current_moviegoer.avatar_url)
+  = "Welcome #{current_moviegoer.email} to RottenPotatoes"
+  = link_to 'Logout', destroy_moviegoer_session_path, :method => :delete
   
+ 
+  = form_tag movies_path, :method => :get, :id => 'ratings_form' do
+    = hidden_field_tag "title_sort", true if @title_header
+    = hidden_field_tag ":release_date_sort", true if @date_header
+    Include:
+    - @all_ratings.each do |rating|
+      = rating
+      = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), :id => "ratings_#{rating}"
+    = submit_tag 'Refresh', :id => 'ratings_submit', :class => 'btn btn-primary'
+
+  %table#movies.table.table-striped.col-md-12
+    %thead
+      %tr
+        %th{:class => @title_header}= link_to 'Movie Title', movies_path(:sort => 'title', :ratings => @selected_ratings), :id => 'title_header'
+        %th Rating
+        %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+        %th More Info
+    %tbody
+      - @movies.each do |movie|
+        %tr
+          %td= movie.title
+          %td= movie.rating
+          %td= movie.release_date
+          %td= link_to "More about #{movie.title}", movie_path(movie)
+
+  = link_to 'Add new movie', new_movie_path
+
+  %h1 Search TMDb for a movie
+
+  = form_tag :action => 'search_tmdb' do
+
+    %label{:for => 'search_terms'} Search Terms
+    = text_field_tag 'search_terms'
+    = submit_tag 'Search TMDb'
+
+- else
+  = link_to 'Login' , new_moviegoer_session_path
+
+
+  %h2 All Movies
+
+
+  = form_tag movies_path, :method => :get, :id => 'ratings_form' do
+    = hidden_field_tag "title_sort", true if @title_header
+    = hidden_field_tag ":release_date_sort", true if @date_header
+    Include:
+    - @all_ratings.each do |rating|
+      = rating
+      = check_box_tag "ratings[#{rating}]", 1, @selected_ratings.include?(rating), :id => "ratings_#{rating}"
+    = submit_tag 'Refresh', :id => 'ratings_submit', :class => 'btn btn-primary'
+

@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
-ruby '2.6.10'
+ruby '2.6.3'
 gem 'rails', '4.2.10'
-
 gem 'sass-rails', '~> 5.0.3'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 2.7.1'
@@ -11,18 +10,15 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'protected_attributes'
 
-
-group :test do
-  gem 'cucumber-rails', :require => false
-  gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions  
-  gem 'database_cleaner' # to clear Cucumber's test database between runs
-  gem 'capybara'         # lets Cucumber pretend to be a web browser
-  gem 'launchy'          # a useful debugging aid for user stories
-end
-
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
+gem 'devise'
+gem 'omniauth'
 
 group :development, :test do
-  gem 'sqlite3'
+  #gem 'pg' ,'~> 0.15'
+  
+  gem 'sqlite3' , '~> 1.3.6'
   gem 'byebug'
   gem 'database_cleaner'
   gem 'capybara'
@@ -35,5 +31,16 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg' ,'~> 0.21'
+  gem 'rails_12factor'  
+end
+
+group :test do
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
+  #gem 'pg' ,'~> 0.15'
+  #gem 'sqlite3' , '~> 1.3.6'
 end
