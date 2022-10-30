@@ -1,0 +1,6 @@
+#login
+  - if @current_user
+    %p.Welcome Welcome, #{@current_user.name}!
+    = link_to 'Log Out', logout_path
+  - else
+    %p.login= link_to 'Log in with your Twitter account', login_path
