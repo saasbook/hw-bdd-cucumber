@@ -1,0 +1,2058 @@
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-23 15:24:16 +0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 15:24:16 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (15.1ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 6.8ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie|
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml__3728186359030965426_47361036698620'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.1ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 15:24:28 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (31.7ms)
+Completed 200 OK in 400ms (Views: 400.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2023-02-23 15:24:28 +0700
+
+
+Started GET "/assets/application.self-ac4347b135ab8935f2dd20089f2acc8bec1d6b2ad528a80fcb03cd445dbd4d27.js?body=1" for 127.0.0.1 at 2023-02-23 15:24:28 +0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2023-02-23 15:24:28 +0700
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 16:35:29 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 301ms (Views: 300.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/" for 127.0.0.1 at 2023-02-23 16:35:34 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (14.8ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 3.0ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie|
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml__2038851480684514920_70224735572640'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 16:35:38 +0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie|
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml__2038851480684514920_70224735572640'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.5ms)
+
+
+Started GET "/movie" for 127.0.0.1 at 2023-02-23 16:35:41 +0700
+
+ActionController::RoutingError (No route matches [GET] "/movie"):
+  vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/cache/gems/railties-4.2.10/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/cache/gems/railties-4.2.10/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/cache/gems/activesupport-4.2.10/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/cache/gems/activesupport-4.2.10/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/cache/gems/activesupport-4.2.10/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/cache/gems/railties-4.2.10/lib/rails/rack/logger.rb:20:in `call'
+  vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/cache/gems/rack-1.6.10/lib/rack/methodoverride.rb:22:in `call'
+  vendor/cache/gems/rack-1.6.10/lib/rack/runtime.rb:18:in `call'
+  vendor/cache/gems/activesupport-4.2.10/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/cache/gems/rack-1.6.10/lib/rack/lock.rb:17:in `call'
+  vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/static.rb:120:in `call'
+  vendor/cache/gems/rack-1.6.10/lib/rack/sendfile.rb:113:in `call'
+  vendor/cache/gems/railties-4.2.10/lib/rails/engine.rb:518:in `call'
+  vendor/cache/gems/railties-4.2.10/lib/rails/application.rb:165:in `call'
+  vendor/cache/gems/rack-1.6.10/lib/rack/lock.rb:17:in `call'
+  vendor/cache/gems/rack-1.6.10/lib/rack/content_length.rb:15:in `call'
+  vendor/cache/gems/rack-1.6.10/lib/rack/handler/webrick.rb:88:in `service'
+  /home/phurichaya/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /home/phurichaya/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /home/phurichaya/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.2ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (81.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 16:35:45 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie|
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml__2038851480684514920_70224735572640'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.4ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 16:35:51 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2023-02-23 16:35:59 +0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A34scMniY0wpqUjG/oLE7ngdsMoKMlA9ZbkPmwiuj0jjMgfGUIcQD2TBdkS5jWJVraV3d5Zxozw4RAYN5+6mVQ==", "movie"=>{"title"=>"", "rating"=>"PG", "release_date(1i)"=>"2023", "release_date(2i)"=>"2", "release_date(3i)"=>"23"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::StatementInvalid (Could not find table 'movies'):
+  app/controllers/movies_controller.rb:37:in `create'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-23 17:33:43 +0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 17:33:43 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie|
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml__4374529299911065926_47176471125040'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.4ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 17:33:53 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (22.2ms)
+Completed 200 OK in 327ms (Views: 326.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-23 17:34:13 +0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 17:34:13 +0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie|
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml__4374529299911065926_47176471125040'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 18:12:06 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 2.2ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie|
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml___2036485958711369650_47150394527980'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.7ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 18:12:13 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (9.3ms)
+Completed 200 OK in 303ms (Views: 302.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 18:44:20 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (21.9ms)
+Completed 200 OK in 278ms (Views: 277.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 19:16:39 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (31.5ms)
+Completed 200 OK in 574ms (Views: 573.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 19:16:42 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 19:17:21 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 19:20:13 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 19:20:15 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 19:20:15 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 19:20:16 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 19:20:16 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 19:20:57 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (17.5ms)
+Completed 200 OK in 274ms (Views: 273.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 19:20:58 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 19:20:59 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 19:53:02 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (15.9ms)
+Completed 200 OK in 301ms (Views: 300.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2023-02-23 19:53:30 +0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZQQtwTH6A1H8muSKOaQzoN2JBlfhHrW6PVaNZGJeBdKFSAZ3qJ9wErHy2gh+q5UbCDHB6n1dRrtgq4TyjR4szw==", "movie"=>{"title"=>"test", "rating"=>"PG", "release_date(1i)"=>"2023", "release_date(2i)"=>"2", "release_date(3i)"=>"22"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.0ms)
+
+ActiveRecord::StatementInvalid (Could not find table 'movies'):
+  app/controllers/movies_controller.rb:37:in `create'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2023-02-23 20:05:51 +0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZQQtwTH6A1H8muSKOaQzoN2JBlfhHrW6PVaNZGJeBdKFSAZ3qJ9wErHy2gh+q5UbCDHB6n1dRrtgq4TyjR4szw==", "movie"=>{"title"=>"test", "rating"=>"PG", "release_date(1i)"=>"2023", "release_date(2i)"=>"2", "release_date(3i)"=>"22"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.1ms)
+
+ActiveRecord::StatementInvalid (Could not find table 'movies'):
+  app/controllers/movies_controller.rb:37:in `create'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.3ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 20:05:58 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 364ms (Views: 363.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2023-02-23 20:06:06 +0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C6kwJMEo6o+kwoeJF6zPmJvjsCQhLeEgkvrIeBC23Wzr5RuSWE2ZzOmquQtQo2kjTlt3mb1uEiHPB8Hu//b0cQ==", "movie"=>{"title"=>"", "rating"=>"G", "release_date(1i)"=>"2023", "release_date(2i)"=>"2", "release_date(3i)"=>"23"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::StatementInvalid (Could not find table 'movies'):
+  app/controllers/movies_controller.rb:37:in `create'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.6ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2023-02-23 20:26:38 +0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C6kwJMEo6o+kwoeJF6zPmJvjsCQhLeEgkvrIeBC23Wzr5RuSWE2ZzOmquQtQo2kjTlt3mb1uEiHPB8Hu//b0cQ==", "movie"=>{"title"=>"", "rating"=>"G", "release_date(1i)"=>"2023", "release_date(2i)"=>"2", "release_date(3i)"=>"23"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.0ms)
+
+ActiveRecord::StatementInvalid (Could not find table 'movies'):
+  app/controllers/movies_controller.rb:37:in `create'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.8ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 20:26:46 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (22.8ms)
+Completed 200 OK in 282ms (Views: 281.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2023-02-23 20:26:51 +0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OsNlBjgPtJB3gLlLNOw+nFMecdCCC/pAsqy+ICA7ZtLaj06woWrH0zroh8lz45gnhqa2bR5ICUHvUbe2z3tPzw==", "movie"=>{"title"=>"", "rating"=>"G", "release_date(1i)"=>"2023", "release_date(2i)"=>"2", "release_date(3i)"=>"23"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::StatementInvalid (Could not find table 'movies'):
+  app/controllers/movies_controller.rb:37:in `create'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.8ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2023-02-23 20:26:54 +0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OsNlBjgPtJB3gLlLNOw+nFMecdCCC/pAsqy+ICA7ZtLaj06woWrH0zroh8lz45gnhqa2bR5ICUHvUbe2z3tPzw==", "movie"=>{"title"=>"", "rating"=>"G", "release_date(1i)"=>"2023", "release_date(2i)"=>"2", "release_date(3i)"=>"23"}, "commit"=>"Save Changes"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::StatementInvalid (Could not find table 'movies'):
+  app/controllers/movies_controller.rb:37:in `create'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.1ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 20:26:56 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 20:26:56 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 20:26:57 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 20:33:59 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 20:33:59 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 22:39:47 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (25.5ms)
+Completed 200 OK in 305ms (Views: 304.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 22:39:52 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/home" for 127.0.0.1 at 2023-02-23 22:39:58 +0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"home"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.5ms)
+
+ActiveRecord::StatementInvalid (Could not find table 'movies'):
+  app/controllers/movies_controller.rb:5:in `show'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.8ms)
+
+
+Started GET "/movies/add" for 127.0.0.1 at 2023-02-23 22:40:24 +0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"add"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::StatementInvalid (Could not find table 'movies'):
+  app/controllers/movies_controller.rb:5:in `show'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 22:43:33 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (18.2ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 2.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie|
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml__3507409555196779617_47164238356420'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.5ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 22:44:34 +0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movies | 
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml__3507409555196779617_47164233806040'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 22:44:35 +0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movies | 
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml__3507409555196779617_47164233806040'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 22:44:51 +0700
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')
+  Rendered movies/index.html.haml within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie| 
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml__3507409555196779617_47164246055960'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.2ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort_by=id" for 127.0.0.1 at 2023-02-23 22:49:49 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort_by"=>"id"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-23 22:49:49 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie| 
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml__3507409555196779617_47164246055960'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.3ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-23 22:54:08 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.9ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.9ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')):
+     8:       %th Release Date
+     9:       %th More Info
+    10:   %tbody
+    11:     - @movies.each do |movie|
+    12:       %tr
+    13:         %td= movie.title
+    14:         %td= movie.rating
+  app/views/movies/index.html.haml:11:in `_app_views_movies_index_html_haml__3507409555196779617_47164244334400'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.5ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-23 22:54:10 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')):
+     8:       %th Release Date
+     9:       %th More Info
+    10:   %tbody
+    11:     - @movies.each do |movie|
+    12:       %tr
+    13:         %td= movie.title
+    14:         %td= movie.rating
+  app/views/movies/index.html.haml:11:in `_app_views_movies_index_html_haml__3507409555196779617_47164244334400'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.1ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-23 22:54:14 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')):
+     8:       %th Release Date
+     9:       %th More Info
+    10:   %tbody
+    11:     - @movies.each do |movie|
+    12:       %tr
+    13:         %td= movie.title
+    14:         %td= movie.rating
+  app/views/movies/index.html.haml:11:in `_app_views_movies_index_html_haml__3507409555196779617_47164244334400'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.7ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-23 22:54:39 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 2.1ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')):
+     8:       %th Release Date
+     9:       %th More Info
+    10:   %tbody
+    11:     - @movies.each do |movie|
+    12:       %tr
+    13:         %td= movie.title
+    14:         %td= movie.rating
+  app/views/movies/index.html.haml:11:in `_app_views_movies_index_html_haml__4052360809877431537_47218429187040'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.1ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.7ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-23 22:55:16 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 2.4ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie| 
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml___423096121980824938_46955828851680'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.8ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-23 22:55:17 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie| 
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml___423096121980824938_46955828851680'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-23 22:59:48 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie| 
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml___423096121980824938_46955828851680'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-23 22:59:49 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie| 
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml___423096121980824938_46955828851680'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.5ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 22:59:56 +0700
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-23 22:59:56 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')):
+    18:       %th{:class => @date_header}= link_to 'Release Date', movies_path(:sort => 'release_date', :ratings => @selected_ratings), :id => 'release_date_header'
+    19:       %th More Info
+    20:   %tbody
+    21:     - @movies.each do |movie| 
+    22:       %tr
+    23:         %td= movie.title
+    24:         %td= movie.rating
+  app/views/movies/index.html.haml:21:in `_app_views_movies_index_html_haml___423096121980824938_46955828851680'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 23:00:05 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 266ms (Views: 265.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (13.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (9.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMovies (20111119180638)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/db/migrate/20111119180638_create_movies.rb:10)
+  [1m[35m (0.7ms)[0m  CREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20111119180638"]]
+  [1m[35m (6.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 23:04:07 +0700
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-23 23:04:07 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (19.0ms)
+Completed 200 OK in 256ms (Views: 250.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 23:04:22 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (12.0ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2023-02-23 23:04:28 +0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JOgD5+3u2MN8hcosx8ELdPM6mTluhWu6iGMs833rykrEpChRdIurgDHt9K6Azq3PJoJehPLGmLvVniVlkqvjVw==", "movie"=>{"title"=>"test", "rating"=>"G", "release_date(1i)"=>"2023", "release_date(2i)"=>"2", "release_date(3i)"=>"23"}, "commit"=>"Save Changes"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (8.5ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "test"], ["rating", "G"], ["release_date", "2023-02-23 00:00:00.000000"], ["created_at", "2023-02-23 16:04:28.764478"], ["updated_at", "2023-02-23 16:04:28.764478"]]
+  [1m[35m (60.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 124ms (ActiveRecord: 68.9ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 23:04:28 +0700
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-23 23:04:28 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2023-02-23 23:06:55 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 23:06:57 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2023-02-23 23:07:05 +0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zwU9BC7B8TAJCJyWEAqj/YRGf625l2pBRggeSKf/95AvSRayt6SCc0RgohRXBQVGUf64ECXUmUAb9RfeSL/ejQ==", "movie"=>{"title"=>"Harry Potter", "rating"=>"G", "release_date(1i)"=>"2023", "release_date(2i)"=>"2", "release_date(3i)"=>"23"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Harry Potter"], ["rating", "G"], ["release_date", "2023-02-23 00:00:00.000000"], ["created_at", "2023-02-23 16:07:05.892171"], ["updated_at", "2023-02-23 16:07:05.892171"]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 16ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 23:07:05 +0700
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-23 23:07:05 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')
+  Rendered movies/index.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2023-02-23 23:07:09 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-23 23:07:14 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-23 23:07:14 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-23 23:07:17 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2023-02-23 23:07:33 +0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wtWZblqz+MeZjHdI5VWWJUGdaxlOGs1tFe16pEOF4bsimbLYw9aLhNTkScqiWjCelCWspNJZPmxIEHMyrMXIpg==", "movie"=>{"title"=>"Fast 888", "rating"=>"PG-13", "release_date(1i)"=>"2023", "release_date(2i)"=>"2", "release_date(3i)"=>"23"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Fast 888"], ["rating", "PG-13"], ["release_date", "2023-02-23 00:00:00.000000"], ["created_at", "2023-02-23 16:07:33.405564"], ["updated_at", "2023-02-23 16:07:33.405564"]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 14ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-23 23:07:33 +0700
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-23 23:07:33 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (31.4ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2023-02-23 23:07:42 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-23 23:07:42 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 127.0.0.1 at 2023-02-23 23:07:53 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-23 23:07:53 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-23 23:58:43 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:76: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:76: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.6ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-23 23:59:49 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.4ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-23 23:59:51 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.8ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:00:15 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:00:49 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.4ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:00:50 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:01:05 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:01:06 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.5ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:01:06 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.4ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.8ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-24 00:01:12 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.6ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-24 00:02:03 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-24 00:02:04 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:77: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (23.0ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.8ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-24 00:03:40 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:68: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:68: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.8ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-24 00:05:54 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:80: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:80: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.9ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-24 00:05:55 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:80: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:80: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-24 00:05:56 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:80: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:80: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-24 00:06:13 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:80: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:80: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-24 00:07:10 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:80: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:80: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.2ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-24 00:07:19 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:78: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:78: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.8ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-24 00:08:52 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:79: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:79: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.4ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.7ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-24 00:12:42 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:80: syntax error, unexpected end, expecting end-of-input):
+  app/controllers/movies_controller.rb:80: syntax error, unexpected end, expecting end-of-input
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.2ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 127.0.0.1 at 2023-02-24 00:13:37 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:13:37 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  Rendered movies/index.html.haml within layouts/application (55.3ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:16: syntax error, unexpected ':', expecting ']'
+...eld_tag :search_terms, params[: search_terms]
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected '}', expecting tSTRING_DEND
+));}\n", 0, false);end;_hamlout.b...
+   ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected backslash, expecting tSTRING_DEND
+...aml_temp);_hamlout.push_text("\n", 0, false);end;_hamlout.bu...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected backslash, expecting tSTRING_DEND
+...aml_temp);_hamlout.push_text("\n<table class='table table-st...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected class, expecting do or '{' or '('
+...mlout.push_text("\n<table class='table table-striped col-md-...
+...                          ^~~~~
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...ble table-striped col-md-12' id='movies'>\n  <thead>\n    <t...
+...                             ^~
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected backslash
+...triped col-md-12' id='movies'>\n  <thead>\n    <tr>\n      <...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected backslash
+...md-12' id='movies'>\n  <thead>\n    <tr>\n      <th#{_hamlou...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected backslash
+...'movies'>\n  <thead>\n    <tr>\n      <th#{_hamlout.adjust_t...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:23: syntax error, unexpected tLAMBEG, expecting ')'
+_hamlout.attributes({}, nil, :class => @title_head...
+                    ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:23: Can't assign to nil
+_hamlout.attributes({}, nil, :class => @title_header)}>#...
+                        ^~~
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:23: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+...t.attributes({}, nil, :class => @title_header)}>#{_hamlout.a...
+...                             ^~
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:24: unknown regexp options - th
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:24: syntax error, unexpected backslash
+...;}</th>\n      <th>Rating</th>\n      <th#{
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:25: syntax error, unexpected '}', expecting tSTRING_DEND
+..., nil, :class => @date_header)}>#{_hamlout.adjust_tabs(1); _...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:26: unknown regexp options - th
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:26: syntax error, unexpected backslash
+.../th>\n      <th>More Info</th>\n    </tr>\n  </thead>\n  <tb...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:26: unknown regexp options - thad
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:26: syntax error, unexpected backslash
+...fo</th>\n    </tr>\n  </thead>\n  <tbody>\n", -1, false);
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:26: syntax error, unexpected backslash
+...  </tr>\n  </thead>\n  <tbody>\n", -1, false);
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:29: syntax error, unexpected backslash
+_hamlout.push_text("    <tr>\n      <td>#{_hamlout.adjust_...
+                            ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:31: syntax error, unexpected '}', expecting tSTRING_DEND
+));}</td>\n      <td>#{_hamlout.a...
+   ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:32: unknown regexp options - td
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:32: syntax error, unexpected backslash
+));}</td>\n      <td>#{_hamlout.adjust_...
+         ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:33: syntax error, unexpected ')'
+));}</td>\n      <td>#{_hamlou...
+^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:34: unknown regexp options - td
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:34: syntax error, unexpected backslash
+));}</td>\n    </tr>\n", -1, false);end...
+         ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:34: unknown regexp options - tbdy
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:34: unmatched close parenthesis: /tr>\n", -1, false);end;_hamlout.push_text("  </
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:34: syntax error, unexpected backslash
+..._hamlout.push_text("  </tbody>\n</table>\n#{_hamlout.adjust_...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:39: unterminated regexp meets end of file
+          end
+              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:39: syntax error, unexpected end-of-input, expecting tSTRING_DEND):
+  app/views/movies/index.html.haml:16: syntax error, unexpected ':', expecting ']'
+  app/views/movies/index.html.haml:18: syntax error, unexpected '}', expecting tSTRING_DEND
+  app/views/movies/index.html.haml:18: syntax error, unexpected backslash, expecting tSTRING_DEND
+  app/views/movies/index.html.haml:18: syntax error, unexpected backslash, expecting tSTRING_DEND
+  app/views/movies/index.html.haml:18: syntax error, unexpected class, expecting do or '{' or '('
+  app/views/movies/index.html.haml:18: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+  app/views/movies/index.html.haml:18: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:18: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:18: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:23: syntax error, unexpected tLAMBEG, expecting ')'
+  app/views/movies/index.html.haml:23: Can't assign to nil
+  app/views/movies/index.html.haml:23: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+  app/views/movies/index.html.haml:24: unknown regexp options - th
+  app/views/movies/index.html.haml:24: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:25: syntax error, unexpected '}', expecting tSTRING_DEND
+  app/views/movies/index.html.haml:26: unknown regexp options - th
+  app/views/movies/index.html.haml:26: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:26: unknown regexp options - thad
+  app/views/movies/index.html.haml:26: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:26: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:29: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:31: syntax error, unexpected '}', expecting tSTRING_DEND
+  app/views/movies/index.html.haml:32: unknown regexp options - td
+  app/views/movies/index.html.haml:32: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:33: syntax error, unexpected ')'
+  app/views/movies/index.html.haml:34: unknown regexp options - td
+  app/views/movies/index.html.haml:34: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:34: unknown regexp options - tbdy
+  app/views/movies/index.html.haml:34: unmatched close parenthesis: /tr>\n", -1, false);end;_hamlout.push_text("  </
+  app/views/movies/index.html.haml:34: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:39: unterminated regexp meets end of file
+  app/views/movies/index.html.haml:39: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:15:06 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:87: syntax error, unexpected end, expecting end-of-input
+end #''
+^~~):
+  app/controllers/movies_controller.rb:87: syntax error, unexpected end, expecting end-of-input
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.4ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:15:30 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  Rendered movies/index.html.haml within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:16: syntax error, unexpected ':', expecting ']'
+...eld_tag :search_terms, params[: search_terms]
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected '}', expecting tSTRING_DEND
+));}\n", 0, false);end;_hamlout.b...
+   ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected backslash, expecting tSTRING_DEND
+...aml_temp);_hamlout.push_text("\n", 0, false);end;_hamlout.bu...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected backslash, expecting tSTRING_DEND
+...aml_temp);_hamlout.push_text("\n<table class='table table-st...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected class, expecting do or '{' or '('
+...mlout.push_text("\n<table class='table table-striped col-md-...
+...                          ^~~~~
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...ble table-striped col-md-12' id='movies'>\n  <thead>\n    <t...
+...                             ^~
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected backslash
+...triped col-md-12' id='movies'>\n  <thead>\n    <tr>\n      <...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected backslash
+...md-12' id='movies'>\n  <thead>\n    <tr>\n      <th#{_hamlou...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:18: syntax error, unexpected backslash
+...'movies'>\n  <thead>\n    <tr>\n      <th#{_hamlout.adjust_t...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:23: syntax error, unexpected tLAMBEG, expecting ')'
+_hamlout.attributes({}, nil, :class => @title_head...
+                    ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:23: Can't assign to nil
+_hamlout.attributes({}, nil, :class => @title_header)}>#...
+                        ^~~
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:23: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+...t.attributes({}, nil, :class => @title_header)}>#{_hamlout.a...
+...                             ^~
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:24: unknown regexp options - th
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:24: syntax error, unexpected backslash
+...;}</th>\n      <th>Rating</th>\n      <th#{
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:25: syntax error, unexpected '}', expecting tSTRING_DEND
+..., nil, :class => @date_header)}>#{_hamlout.adjust_tabs(1); _...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:26: unknown regexp options - th
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:26: syntax error, unexpected backslash
+.../th>\n      <th>More Info</th>\n    </tr>\n  </thead>\n  <tb...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:26: unknown regexp options - thad
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:26: syntax error, unexpected backslash
+...fo</th>\n    </tr>\n  </thead>\n  <tbody>\n", -1, false);
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:26: syntax error, unexpected backslash
+...  </tr>\n  </thead>\n  <tbody>\n", -1, false);
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:29: syntax error, unexpected backslash
+_hamlout.push_text("    <tr>\n      <td>#{_hamlout.adjust_...
+                            ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:31: syntax error, unexpected '}', expecting tSTRING_DEND
+));}</td>\n      <td>#{_hamlout.a...
+   ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:32: unknown regexp options - td
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:32: syntax error, unexpected backslash
+));}</td>\n      <td>#{_hamlout.adjust_...
+         ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:33: syntax error, unexpected ')'
+));}</td>\n      <td>#{_hamlou...
+^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:34: unknown regexp options - td
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:34: syntax error, unexpected backslash
+));}</td>\n    </tr>\n", -1, false);end...
+         ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:34: unknown regexp options - tbdy
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:34: unmatched close parenthesis: /tr>\n", -1, false);end;_hamlout.push_text("  </
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:34: syntax error, unexpected backslash
+..._hamlout.push_text("  </tbody>\n</table>\n#{_hamlout.adjust_...
+...                              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:39: unterminated regexp meets end of file
+          end
+              ^
+/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:39: syntax error, unexpected end-of-input, expecting tSTRING_DEND):
+  app/views/movies/index.html.haml:16: syntax error, unexpected ':', expecting ']'
+  app/views/movies/index.html.haml:18: syntax error, unexpected '}', expecting tSTRING_DEND
+  app/views/movies/index.html.haml:18: syntax error, unexpected backslash, expecting tSTRING_DEND
+  app/views/movies/index.html.haml:18: syntax error, unexpected backslash, expecting tSTRING_DEND
+  app/views/movies/index.html.haml:18: syntax error, unexpected class, expecting do or '{' or '('
+  app/views/movies/index.html.haml:18: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+  app/views/movies/index.html.haml:18: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:18: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:18: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:23: syntax error, unexpected tLAMBEG, expecting ')'
+  app/views/movies/index.html.haml:23: Can't assign to nil
+  app/views/movies/index.html.haml:23: syntax error, unexpected =>, expecting '.' or &. or :: or '['
+  app/views/movies/index.html.haml:24: unknown regexp options - th
+  app/views/movies/index.html.haml:24: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:25: syntax error, unexpected '}', expecting tSTRING_DEND
+  app/views/movies/index.html.haml:26: unknown regexp options - th
+  app/views/movies/index.html.haml:26: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:26: unknown regexp options - thad
+  app/views/movies/index.html.haml:26: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:26: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:29: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:31: syntax error, unexpected '}', expecting tSTRING_DEND
+  app/views/movies/index.html.haml:32: unknown regexp options - td
+  app/views/movies/index.html.haml:32: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:33: syntax error, unexpected ')'
+  app/views/movies/index.html.haml:34: unknown regexp options - td
+  app/views/movies/index.html.haml:34: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:34: unknown regexp options - tbdy
+  app/views/movies/index.html.haml:34: unmatched close parenthesis: /tr>\n", -1, false);end;_hamlout.push_text("  </
+  app/views/movies/index.html.haml:34: syntax error, unexpected backslash
+  app/views/movies/index.html.haml:39: unterminated regexp meets end of file
+  app/views/movies/index.html.haml:39: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.8ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:17:09 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  Rendered movies/index.html.haml within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/views/movies/index.html.haml:17: syntax error, unexpected ':'
+...e((submit tag "Search TMDb",  : name => nil
+...                              ^):
+  app/views/movies/index.html.haml:17: syntax error, unexpected ':'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.3ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:19:28 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (46.9ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 2.5ms)
+
+ActionView::Template::Error (undefined local variable or method `search_tImdb_path' for #<#<Class:0x0000560935cbf608>:0x0000560934fc2900>):
+    11:   = submit_tag 'Refresh', :id => 'ratings_submit', :class => 'btn btn-primary'
+    12: 
+    13:   %h3 Search TMDb for a movie
+    14:   = form_tag search_tImdb_path, :method => :post do
+    15:     = label_tag :search_terms, "Search Terms:"
+    16:     = text_field_tag :search_terms, params[:search_terms]
+    17:     = submit_tag "Search TMDb",  :name => nil
+  app/views/movies/index.html.haml:14:in `block in _app_views_movies_index_html_haml___4014478932218726130_47298771833620'
+  app/views/movies/index.html.haml:4:in `_app_views_movies_index_html_haml___4014478932218726130_47298771833620'
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.9ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:19:49 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 305ms (Views: 303.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=6ZEoMUq%2FVgK8lbb0jXIA%2B33Hr1lKgFgnGCg6q0GCUmQJ3QOH09olQfH9iHbKfaZAqH9o5NbDqyZF1TM9rsJ7eQ%3D%3D&search_terms=test" for 127.0.0.1 at 2023-02-24 00:20:34 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "authenticity_token"=>"6ZEoMUq/VgK8lbb0jXIA+33Hr1lKgFgnGCg6q0GCUmQJ3QOH09olQfH9iHbKfaZAqH9o5NbDqyZF1TM9rsJ7eQ==", "search_terms"=>"test"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:20:34 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=FgYAsFpg7AtX%2Bsn%2FLYGc0IkdloCFzQ694Oeh%2BI6gXf32SisGwwWfSBqS931qjjprXKVRPRmO%2Fby9GqhuYeB04A%3D%3D&search_terms=" for 127.0.0.1 at 2023-02-24 00:20:36 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "authenticity_token"=>"FgYAsFpg7AtX+sn/LYGc0IkdloCFzQ694Oeh+I6gXf32SisGwwWfSBqS931qjjprXKVRPRmO/by9GqhuYeB04A==", "search_terms"=>""}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:20:36 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=Hja%2FycToVkMDmOLEm3X5eJJaNlnhAqsOQNVq7DU56sX%2BepR%2FXY0lAE7w3Ebcel%2FDR%2BLx5H1BWA8dKGN62nnD2A%3D%3D&search_terms=" for 127.0.0.1 at 2023-02-24 00:20:37 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "authenticity_token"=>"Hja/ycToVkMDmOLEm3X5eJJaNlnhAqsOQNVq7DU56sX+epR/XY0lAE7w3Ebcel/DR+Lx5H1BWA8dKGN62nnD2A==", "search_terms"=>""}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:20:37 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=VApvPafhymvgUH4dQMi9BiowXl9S27ppIeybkL7TIC20RkSLPoS5KK04QJ8Hxxu9%2F4iZ4s6YSWh8EZIGUZMJMA%3D%3D&search_terms=" for 127.0.0.1 at 2023-02-24 00:20:38 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "authenticity_token"=>"VApvPafhymvgUH4dQMi9BiowXl9S27ppIeybkL7TIC20RkSLPoS5KK04QJ8Hxxu9/4iZ4s6YSWh8EZIGUZMJMA==", "search_terms"=>""}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:20:38 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=psFue6rp2ighkfWeOzGIOikWxi6ia6eQF4kH55NExxdGjUXNM4ypa2z5yxx8Pi6B%2FK4Bkz4oVJFKdA5xfATuCg%3D%3D&search_terms=test" for 127.0.0.1 at 2023-02-24 00:20:41 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "authenticity_token"=>"psFue6rp2ighkfWeOzGIOikWxi6ia6eQF4kH55NExxdGjUXNM4ypa2z5yxx8Pi6B/K4Bkz4oVJFKdA5xfATuCg==", "search_terms"=>"test"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:20:41 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=6E3CF%2B%2B8ywNs%2Bixuv2eL7M9KFh%2BvYGzMIEl4tVQ%2BMQEIAemhdtm4QCGSEuz4aC1XGvLRojMjn819tHEju34YHA%3D%3D&search_terms=" for 127.0.0.1 at 2023-02-24 00:20:43 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "authenticity_token"=>"6E3CF++8ywNs+ixuv2eL7M9KFh+vYGzMIEl4tVQ+MQEIAemhdtm4QCGSEuz4aC1XGvLRojMjn819tHEju34YHA==", "search_terms"=>""}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:20:43 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-24 00:20:47 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (14.7ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2023-02-24 00:21:17 +0700
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IexINxyWE02APso21qukt1Jfu2ua8vUc25DNMCQLPuTBoGOBhfNgDs1W9LSRpAIMh+d81gaxBh2GbcSmy0sX+Q==", "movie"=>{"title"=>"Avatar", "rating"=>"R", "release_date(1i)"=>"2023", "release_date(2i)"=>"2", "release_date(3i)"=>"23"}, "commit"=>"Save Changes"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Avatar"], ["rating", "R"], ["release_date", "2023-02-23 00:00:00.000000"], ["created_at", "2023-02-23 17:21:17.468570"], ["updated_at", "2023-02-23 17:21:17.468570"]]
+  [1m[36m (16.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 24ms (ActiveRecord: 17.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-24 00:21:17 +0700
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:21:17 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh&utf8=%E2%9C%93&authenticity_token=UjBt1wElkJIUCY3IFr%2BWg%2F0VScWxN0c8ZPqaX%2FClIimyfEZhmEDj0Vlhs0pRsDA4KK2OeC10tD05B5PJH%2BULNA%3D%3D&search_terms=" for 127.0.0.1 at 2023-02-24 00:21:21 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh", "authenticity_token"=>"UjBt1wElkJIUCY3IFr+Wg/0VScWxN0c8ZPqaX/ClIimyfEZhmEDj0Vlhs0pRsDA4KK2OeC10tD05B5PJH+ULNA==", "search_terms"=>""}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:21:21 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh&utf8=%E2%9C%93&authenticity_token=RnZ%2Fk79fVs5Y6Vm8FhUSttQfLpBcVbpv%2FTelFR3HDhSmOlQlJjoljRWBZz5RGrQNAafpLcAWSW6gyqyD8ocnCQ%3D%3D&search_terms=Avatar" for 127.0.0.1 at 2023-02-24 00:21:25 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh", "authenticity_token"=>"RnZ/k79fVs5Y6Vm8FhUSttQfLpBcVbpv/TelFR3HDhSmOlQlJjoljRWBZz5RGrQNAafpLcAWSW6gyqyD8ocnCQ==", "search_terms"=>"Avatar"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:21:25 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/4" for 127.0.0.1 at 2023-02-24 00:21:32 +0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered movies/show.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 23ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2023-02-24 00:21:42 +0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/movies/1" for 127.0.0.1 at 2023-02-24 00:21:47 +0700
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jb35hEROHr2ejdSCr9HRCprVz9RilEaWAu/RDSU/Cg9t8dIy3Stt/tPl6gDo3nexT20Iaf7XtZdfEtibyn8jEg==", "id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 1]]
+  [1m[35m (21.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 31ms (ActiveRecord: 22.6ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2023-02-24 00:21:47 +0700
+Processing by MoviesController#index as HTML
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:21:47 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh&utf8=%E2%9C%93&authenticity_token=%2ByS0bAu0yUCteUFiAzHq1dmsU7%2B7ldE9qC7EBs%2BsYb0baJ%2FaktG6A%2BARf%2BBEPkxuDBSUAifWIjz1082QIOxIoA%3D%3D&search_terms=" for 127.0.0.1 at 2023-02-24 00:21:55 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh", "authenticity_token"=>"+yS0bAu0yUCteUFiAzHq1dmsU7+7ldE9qC7EBs+sYb0baJ/aktG6A+ARf+BEPkxuDBSUAifWIjz1082QIOxIoA==", "search_terms"=>""}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:21:55 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (10.9ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:23:37 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (1.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=GzzSbyagxxLQkDjGZL63y6DB03Ir40UwDT%2FE52ufRzf7cPnZv8W0UZ34BkQjsRFwdXkUz7egtjFQws1xhN9uKg%3D%3D&search_terms=Avatar" for 127.0.0.1 at 2023-02-24 00:23:42 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "authenticity_token"=>"GzzSbyagxxLQkDjGZL63y6DB03Ir40UwDT/E52ufRzf7cPnZv8W0UZ34BkQjsRFwdXkUz7egtjFQws1xhN9uKg==", "search_terms"=>"Avatar"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:23:42 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:38:31 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (31.3ms)
+Completed 200 OK in 406ms (Views: 390.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=ksjy%2FmEAMBoHv2dwfJKozrir9kfXtBHTUoWdpISTAgxyhNlI%2BGVDWUrXWfI7nQ51bRMx%2Bkv34tIPeJQya9MrEQ%3D%3D&search_terms=test" for 127.0.0.1 at 2023-02-24 00:38:36 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "authenticity_token"=>"ksjy/mEAMBoHv2dwfJKozrir9kfXtBHTUoWdpISTAgxyhNlI+GVDWUrXWfI7nQ51bRMx+kv34tIPeJQya9MrEQ==", "search_terms"=>"test"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:38:36 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (20.7ms)
+Completed 200 OK in 59ms (Views: 58.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh&utf8=%E2%9C%93&authenticity_token=pEWpmGkZqnqGHpM37vquocObWcfneRIqGLbrU3bjXGJECYIu8HzZOct2rbWp9QgaFiOeens64StFS%2BLFmaN1fw%3D%3D&search_terms=Inception" for 127.0.0.1 at 2023-02-24 00:38:59 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh", "authenticity_token"=>"pEWpmGkZqnqGHpM37vquocObWcfneRIqGLbrU3bjXGJECYIu8HzZOct2rbWp9QgaFiOeens64StFS+LFmaN1fw==", "search_terms"=>"Inception"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:38:59 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh&utf8=%E2%9C%93&authenticity_token=ghcNHPBnS5g4zHPUefEzJWpUjPtzcCjbpGHrZ3VIZEhiWyaqaQI423WkTVY%2B%2FpWev%2BxLRu8z29r5nOLxmghNVQ%3D%3D&search_terms=" for 127.0.0.1 at 2023-02-24 00:39:12 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh", "authenticity_token"=>"ghcNHPBnS5g4zHPUefEzJWpUjPtzcCjbpGHrZ3VIZEhiWyaqaQI423WkTVY+/pWev+xLRu8z29r5nOLxmghNVQ==", "search_terms"=>""}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:39:12 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=5tR7Xnt8A5Q03PfVaWFSZiccA5QQR1Sur9HWeHLpKagGmFDo4hlw13m0yVcubvTd8qTEKYwEp6%2FyLN%2FunakAtQ%3D%3D&search_terms=Avatar" for 127.0.0.1 at 2023-02-24 00:39:36 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "authenticity_token"=>"5tR7Xnt8A5Q03PfVaWFSZiccA5QQR1Sur9HWeHLpKagGmFDo4hlw13m0yVcubvTd8qTEKYwEp6/yLN/unakAtQ==", "search_terms"=>"Avatar"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:39:36 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:46:07 +0700
+
+SyntaxError (/home/phurichaya/Desktop/cucumber-bdd/rottenpotatoes/app/controllers/movies_controller.rb:85: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:85: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered vendor/cache/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.6ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:47:52 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=cJ0RUKhBf1MuXzb8Ccp9e1cw82t61XEbzq%2FvMtlWIoWQ0TrmMSQMEGM3CH5OxdvAgog01uaWghqTUuakNhYLmA%3D%3D&search_terms=" for 127.0.0.1 at 2023-02-24 00:47:55 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "authenticity_token"=>"cJ0RUKhBf1MuXzb8Ccp9e1cw82t61XEbzq/vMtlWIoWQ0TrmMSQMEGM3CH5OxdvAgog01uaWghqTUuakNhYLmA==", "search_terms"=>""}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:47:55 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=bB6ep0%2BIsD38wEaZti38taGqwUNfyE3%2B6%2BFEDJSYjjyMUrUR1u3DfrGoeBvxIloOdBIG%2FsOLvv%2B2HE2ae9inIQ%3D%3D&search_terms=Avatar" for 127.0.0.1 at 2023-02-24 00:47:58 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "authenticity_token"=>"bB6ep0+IsD38wEaZti38taGqwUNfyE3+6+FEDJSYjjyMUrUR1u3DfrGoeBvxIloOdBIG/sOLvv+2HE2ae9inIQ==", "search_terms"=>"Avatar"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:47:58 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=5b2axhpHf85%2FEEASC1ZrXYnY6dP8xyvgO0FmsZ5Jnf8F8bFwgyIMjTJ4fpBMWc3mXGAubmCE2OFmvG8ncQm04g%3D%3D&search_terms=" for 127.0.0.1 at 2023-02-24 00:47:58 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "authenticity_token"=>"5b2axhpHf85/EEASC1ZrXYnY6dP8xyvgO0FmsZ5Jnf8F8bFwgyIMjTJ4fpBMWc3mXGAubmCE2OFmvG8ncQm04g==", "search_terms"=>""}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=5b2axhpHf85%2FEEASC1ZrXYnY6dP8xyvgO0FmsZ5Jnf8F8bFwgyIMjTJ4fpBMWc3mXGAubmCE2OFmvG8ncQm04g%3D%3D&search_terms=" for 127.0.0.1 at 2023-02-24 00:47:58 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "authenticity_token"=>"5b2axhpHf85/EEASC1ZrXYnY6dP8xyvgO0FmsZ5Jnf8F8bFwgyIMjTJ4fpBMWc3mXGAubmCE2OFmvG8ncQm04g==", "search_terms"=>""}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 18ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:47:58 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=AJKT%2FhHXTMbuDJpymnqzqbjoc3H7an82C0D8U%2FwJ2hfg3rhIiLI%2FhaNkpPDddRUSbVC0zGcpjDdWvfXFE0nzCg%3D%3D&search_terms=" for 127.0.0.1 at 2023-02-24 00:47:59 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "authenticity_token"=>"AJKT/hHXTMbuDJpymnqzqbjoc3H7an82C0D8U/wJ2hfg3rhIiLI/haNkpPDddRUSbVC0zGcpjDdWvfXFE0nzCg==", "search_terms"=>""}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:47:59 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=p4wrWbFcNU1WSNwMmWNdDh0kVYb0PkEfNnMFimIqKmRHwADvKDlGDhsg4o7ebPu1yJySO2h9sh5rjgwcjWoDeQ%3D%3D&search_terms=" for 127.0.0.1 at 2023-02-24 00:48:01 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "authenticity_token"=>"p4wrWbFcNU1WSNwMmWNdDh0kVYb0PkEfNnMFimIqKmRHwADvKDlGDhsg4o7ebPu1yJySO2h9sh5rjgwcjWoDeQ==", "search_terms"=>""}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 00:48:01 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (15.4ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 01:02:21 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (32.0ms)
+Completed 200 OK in 368ms (Views: 344.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&%3Arelease_date_sort=true&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BNC-17%5D=1&ratings%5BR%5D=1&utf8=%E2%9C%93&authenticity_token=YrGDmcN0hkEtvUr9dZvi7evAUmjNahGN42HFzIql4S%2BC%2FagvWhH1AmDVdH8ylERWPniV1VEp4oy%2BnMxaZeXIMg%3D%3D&search_terms=Avatar" for 127.0.0.1 at 2023-02-24 01:02:32 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", ":release_date_sort"=>"true", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "NC-17"=>"1", "R"=>"1"}, "authenticity_token"=>"YrGDmcN0hkEtvUr9dZvi7evAUmjNahGN42HFzIql4S+C/agvWhH1AmDVdH8ylERWPniV1VEp4oy+nMxaZeXIMg==", "search_terms"=>"Avatar"}
+Redirected to http://localhost:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 127.0.0.1 at 2023-02-24 01:02:32 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC
+  Rendered movies/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2023-02-24 01:02:39 +0700
+Processing by MoviesController#new as HTML
+  Rendered movies/new.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/3" for 127.0.0.1 at 2023-02-24 01:02:44 +0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered movies/show.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/3/edit" for 127.0.0.1 at 2023-02-24 01:02:47 +0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/edit.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms)
