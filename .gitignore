@@ -71,3 +71,5 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 /public/uploads
+.devcontainer/devcontainer.json
+.devcontainer/Dockerfile
