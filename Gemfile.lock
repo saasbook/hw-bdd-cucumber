@@ -232,6 +232,7 @@ DEPENDENCIES
   byebug
   cucumber-rails
   database_cleaner
+  execjs
   jquery-rails
   pg (~> 0.2)
   pry
