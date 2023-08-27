@@ -45,6 +45,23 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
+  def search_tmdb
+    tmdb_movies = {0 => {:title => "Inception", :rating => "R", :description => 'n/a', 
+                  :created_at => Time.now(), :updated_at => Time.now(), :release_date => Time.now()}}
+    results = Hash.new()
+    tmdb_movies.each_pair do |key, data|
+      if data[:title].downcase == params[:movie][:title].downcase
+        results[key] = data
+      end
+    end
+    if results.length == 0
+      flash[:notice] = "'#{params[:movie][:title]}' was not found in TMDb."
+      redirect_to movies_path
+    else
+      @movies = results
+    end
+  end
+
   private
 
   def force_index_redirect
@@ -65,5 +82,9 @@ class MoviesController < ApplicationController
 
   def sort_by
     params[:sort_by] || session[:sort_by] || 'id'
+  end
+
+  def movie_params
+    params.require(:movie).permit(:title, :rating, :description, :release_date)
   end
 end

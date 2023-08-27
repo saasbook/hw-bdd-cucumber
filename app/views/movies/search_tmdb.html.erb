@@ -1,0 +1,7 @@
+<h2>Search result</h2>
+
+<% @movies.values.each do |movie|%>
+  <%= "#{movie[:title]}, Rating: #{movie[:rating]}, Release date: #{movie[:release_date]}" %>
+<% end %>
+<br><br><br>
+<%= link_to "Back to home", movies_path, class: 'btn btn-secondary' %>
