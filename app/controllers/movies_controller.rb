@@ -47,7 +47,7 @@ class MoviesController < ApplicationController
 
   def search_tmdb
     tmdb_movies = {0 => {:title => "Inception", :rating => "R", :description => 'n/a', 
-                  :created_at => Time.now(), :updated_at => Time.now(), :release_date => Time.now()}}
+                  :created_at => '25-Nov-1992', :updated_at => '25-Nov-1992', :release_date => '25-Nov-1992'}}
     results = Hash.new()
     tmdb_movies.each_pair do |key, data|
       if data[:title].downcase == params[:movie][:title].downcase
