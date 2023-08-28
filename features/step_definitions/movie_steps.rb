@@ -59,8 +59,10 @@ end
 
 Then /I should see all the movies/ do
   # Make sure that all the movies in the app are visible in the table
-  rows = page.all('#movies tbody tr').size
-  expect(rows).to eq 10
+  movies = Movie.all
+  movies.each do |movie|
+    steps %Q{ Then I should see "#{movie.title}" }
+  end
 end
 
 ### Utility Steps Just for this assignment.

@@ -21,4 +21,7 @@ Scenario: Try to add existing movie (happy path)
     And I press "Search TMDb"
     Then I should be on the Search Results page
     And I should not see "not found"
+    And the "Title" field should contain "Inception"
+    And I press "Save Changes"
+    Then I should be on the RottenPotatoes home page
     And I should see "Inception"
