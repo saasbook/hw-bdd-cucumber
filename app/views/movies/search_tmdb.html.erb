@@ -5,7 +5,7 @@
     <%= label :movie, :title, 'Title', class: 'col-form-label' %>
     <%= text_field :movie, :title, class: 'form-control', value: "#{movie[:title]}" %>
     <%= label :movie, :rating, 'Rating', class: 'col-form-label'%>
-    <%= select :movie, :rating, ['G','PG','PG-13','R'], {prompt: "#{movie[:rating]}"}, {class: 'form-control col-1'} %>
+    <%= select :movie, :rating, ['G','PG','PG-13','R'], {class: 'form-control col-1', selected: "#{movie[:rating]}"} %>
     <%= label :movie, :release_date, 'Released On', class: 'col-form-label' %>
     <%= date_select :movie, :release_date, {default: Date.strptime('25-Nov-1992', '%d-%b-%Y')}, class: 'form-control col-2 d-inline' %>
     <br><br>
