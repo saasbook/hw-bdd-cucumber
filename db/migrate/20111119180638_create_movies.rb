@@ -1,4 +1,5 @@
 class CreateMovies < ActiveRecord::Migration
+
   def up
     create_table :movies do |t|
       t.string :title

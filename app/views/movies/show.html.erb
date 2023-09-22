@@ -20,5 +20,6 @@
 <div class="row">
   <%= link_to 'Edit', edit_movie_path(@movie), class: 'btn btn-primary col-2' %>
   <%= link_to 'Delete', movie_path(@movie), 'data-method': 'delete', 'data-confirm': 'Are you sure?', class: 'btn btn-danger col-2' %>
+  <%= link_to 'Review this movie', new_movie_review_path(@movie), class: 'btn btn-primary col-2'%>
   <%= link_to 'Back to movie list', movies_path, class: 'btn btn-primary col-2' %>
 </div>

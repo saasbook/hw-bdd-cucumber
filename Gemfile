@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.6.6'
 gem 'rails'
 
+gem 'haml-rails'
 
 gem 'sass-rails', '~> 5.0.3'
 gem 'uglifier', '>= 2.7.1'
