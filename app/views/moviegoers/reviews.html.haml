@@ -1,0 +1,16 @@
+=render partial: "moviegoers/profile"
+%br
+%h2 This user's reviews
+%table{class: "table table-striped col-md-12", id: "reviews"}
+    %thead
+        %tr
+            %th Movie
+            %th Potatoes
+            %th Comments
+    %tbody
+        -@reviews.each do |review|
+            %tr
+                %td=review.movie.title
+                %td=review.potatoes
+                %td=review.comments
+=link_to "Back", moviegoer_show_path(@user), class: 'btn btn-primary col-2'

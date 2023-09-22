@@ -1,0 +1,8 @@
+=image_tag(@user.avatar_url)
+-if @user.full_name
+    %h1 User: #{@user.full_name}
+-else
+    %h1 User: #{@user.email}
+="Email: #{@user.email}"
+%br
+%br

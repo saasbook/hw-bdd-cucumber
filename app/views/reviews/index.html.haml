@@ -1,0 +1,19 @@
+%h1 Reviews of #{@movie.title}
+-if @ordering == :asc
+    =link_to "Ascending Potatoes", movie_reviews_path(@movie, asc: false)
+-else
+    =link_to "Descending Potatoes", movie_reviews_path(@movie, asc: true)
+%table{class: "table table-striped col-md-12", id: "reviews"}
+    %thead
+        %tr
+            %th Potatoes
+            %th Comments
+            %th Reviewer
+    %tbody
+        -@reviews.each do |review|
+            %tr
+                %td=review.potatoes
+                %td=review.comments
+                %td=link_to "#{review.moviegoer.email}", moviegoer_show_path(review.moviegoer.id)
+%br
+=link_to "Write a review", new_movie_review_path(@movie), class: 'btn btn-primary col-2'

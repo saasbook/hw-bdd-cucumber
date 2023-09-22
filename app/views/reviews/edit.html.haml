@@ -1,12 +1,12 @@
-%h1 New Review for #{@movie.title}
+%h1 Edit review for #{@movie.title}
 
 = form_for [@movie, @review] do |f|
     %label How many potatoes:
-    = select :review, :potatoes, options_for_select(1..5)
+    = select :review, :potatoes, options_for_select(1..5, @review.potatoes)
     %br
     = label :review, :comments, "Comments:"
     %br
-    = text_area :review, :comments, size: "100x10"
+    = text_area :review, :comments, {size: "100x10", value: @review.comments}
     %br
     = hidden_field :review, :moviegoer_id, value: current_moviegoer.id
     = hidden_field :review, :movie_id, value: @movie.id
