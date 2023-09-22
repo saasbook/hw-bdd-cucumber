@@ -2,7 +2,7 @@
 
 class Moviegoers::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def google_oauth2
-    user = Moviegoer.from_omniauth(request.env['omniauth.auth'])
+    user = Moviegoer.from_omniauth(auth)
     if user.present?
       sign_out_all_scopes
       flash[:success] =
