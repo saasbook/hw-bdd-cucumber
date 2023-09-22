@@ -1,13 +1,18 @@
 source 'https://rubygems.org'
 
 ruby '2.6.6'
-gem 'rails', '4.2.11'
+gem 'rails'
 
 
 gem 'sass-rails', '~> 5.0.3'
 gem 'uglifier', '>= 2.7.1'
 
 gem 'jquery-rails'
+
+gem 'devise'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
+gem 'dotenv-rails'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
