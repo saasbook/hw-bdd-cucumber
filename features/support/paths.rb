@@ -20,6 +20,10 @@ module NavigationHelpers
     when /^the Create New Movie page$/
       '/movies/new'
 
+    # when, Search Results
+    when 'the "Search Results" page'
+      search_tmdb_path
+
     # when, save changes
 
     # Add more mappings here.
