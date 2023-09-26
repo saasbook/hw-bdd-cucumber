@@ -10,6 +10,10 @@ Given /the following movies exist/ do |movies_table|
   # pending "Fill in this step in movie_steps.rb"
 end
 
+Given /^(?:|I )check "([^"]*)"$/ do |field|
+  check(field)
+end
+
 Then /(.*) seed movies should exist/ do | n_seeds |
   expect(Movie.count).to eq n_seeds.to_i
 end
