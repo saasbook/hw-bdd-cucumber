@@ -42,9 +42,6 @@ When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
 end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
-  if page_name == "the RottenPotatoes home page"
-    page_name = "the home page"
-  end
   visit path_to(page_name)
 end
 
