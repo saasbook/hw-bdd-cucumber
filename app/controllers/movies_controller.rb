@@ -23,6 +23,7 @@ class MoviesController < ApplicationController
 
   # Copied, for testing
   def search_tmdb
+    # happy path
     movies_tmdb = ['Inception']
     if movies_tmdb.include?(params[:title])
       @title = "#{params[:title]}"
@@ -31,7 +32,7 @@ class MoviesController < ApplicationController
       @description = "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster."
     else
       #Sad path
-      flash[:error] = "'Movie That Does Not Exist' was not found in TMDb."
+      flash[:error] = "'#{params[:title]}' was not found in TMDb."
       redirect_to movies_path
     end
   end
