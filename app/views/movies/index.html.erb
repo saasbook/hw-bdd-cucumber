@@ -57,7 +57,7 @@
   <%# search bar TMDb %>
   <%= form_tag search_tmdb_path do %>
     <th>Search TMDb for a movie</th>
-    <%= text_field_tag(:title, nil, placeholder: 'Search Terms') %>
+    <%= text_field_tag(:search_terms, nil, placeholder: 'Search Terms') %>
     <%= submit_tag "Search TMDb", class: 'btn btn-primary' %>
   <% end %>
 </div>

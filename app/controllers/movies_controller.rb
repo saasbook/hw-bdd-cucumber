@@ -23,19 +23,33 @@ class MoviesController < ApplicationController
 
   # Copied, for testing
   def search_tmdb
-    # happy path
-    movies_tmdb = ['Inception']
-    if movies_tmdb.include?(params[:title])
-      @title = "#{params[:title]}"
-      @rating = "PG-13"
-      @release_date = Date.new(2010, 8, 15)
-      @description = "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster."
+    Tmdb::Search.movie(params[:search_terms])
+
+    # Check if the title parameter is present
+    if params[:search_terms].present?
+      # Search for movies with the provided title
+      search_results = Tmdb::Search.movie(params[:search_terms])
+
+      if search_results.any?
+        # Take the first movie from the search results
+        movie = search_results.first
+
+        # Assign movie details to instance variables
+        @title = movie.title
+        @rating = movie.vote_average.to_s
+        @release_date = Date.parse(movie.release_date)
+        @description = movie.overview
+      else
+        # Movie not found, sad path
+        flash[:error] = "'#{params[:search_terms]}' was not found in TMDb."
+        redirect_to movies_path
+      end
     else
-      #Sad path
-      flash[:error] = "'#{params[:title]}' was not found in TMDb."
+      flash[:error] = "Please provide a movie title."
       redirect_to movies_path
     end
   end
+
 
   def movie_params
     params.require(:movie).permit(:title, :rating, :description, :release_date)

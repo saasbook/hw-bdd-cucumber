@@ -22,7 +22,7 @@ module NavigationHelpers
 
     # when, Search Results
     when 'the "Search Results" page'
-      search_tmdb_path
+      '/movies/search_tmdb'
 
     # when, save changes
 
