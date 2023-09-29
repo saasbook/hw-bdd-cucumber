@@ -22,23 +22,33 @@ class MoviesController < ApplicationController
   end
 
   # Copied, for testing
+  # Copied, for testing
   def search_tmdb
-    Tmdb::Search.movie(params[:search_terms])
+    Tmdb::Api.key(ENV['TMDB_API_KEY'])
+    # Tmdb::Search.movie(params[:search_terms])
 
     # Check if the title parameter is present
     if params[:search_terms].present?
+
+      @search = Tmdb::Search.new
+      @search.resource('movie') # determines type of resource
+      @search.query(params[:search_terms]) # the query to search against
+      search_results = @search.fetch # makes request
+
       # Search for movies with the provided title
-      search_results = Tmdb::Search.movie(params[:search_terms])
+      # search_results = Tmdb::Search.movie(params[:search_terms])
 
       if search_results.any?
         # Take the first movie from the search results
-        movie = search_results.first
-
+        movie = Tmdb::Movie.detail(search_results.first['id'])
         # Assign movie details to instance variables
-        @title = movie.title
-        @rating = movie.vote_average.to_s
-        @release_date = Date.parse(movie.release_date)
-        @description = movie.overview
+        @title = movie['title']
+        @rating = 'R'
+        @release_date = Date.parse(movie['release_date'])
+        @description = movie['overview']
+        # Fetch the poster URL from the movie details
+        poster_size = 'w500'
+        @poster_url = "https://image.tmdb.org/t/p/#{poster_size}#{movie['poster_path']}" if movie['poster_path'].present?
       else
         # Movie not found, sad path
         flash[:error] = "'#{params[:search_terms]}' was not found in TMDb."

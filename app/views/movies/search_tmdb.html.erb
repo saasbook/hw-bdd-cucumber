@@ -5,6 +5,13 @@
 <h4>Add Movie by Results </h4>
 <%#  Part 2: Start here... %>
 
+<!-- Display the movie poster -->
+    <% if @poster_url.present? %>
+      <div class="form-group">
+        <img src="<%= @poster_url %>" alt="Movie Poster" class="img-fluid" />
+      </div>
+    <% end %>
+
 <div class="d-flex justify-content-between align-items-center">
   <%= form_tag movies_path do %>
     <div class="form-group">

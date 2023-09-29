@@ -48,7 +48,7 @@ group :test do
   gem 'launchy'          # a useful debugging aid for user stories
 end
 
-gem "themoviedb-api", "~> 1.4"
+gem "themoviedb"
 
 gem "omniauth", "~> 2.0"
 

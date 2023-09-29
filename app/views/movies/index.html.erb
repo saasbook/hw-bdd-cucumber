@@ -14,6 +14,7 @@
     </div>
   <% end %>
   <%= submit_tag 'Refresh', id: 'ratings_submit', class: 'btn btn-primary' %>
+<% end %>
 
   <%# search bar TMDb %>
   <%= form_tag search_tmdb_path do %>
@@ -22,7 +23,6 @@
     <%= submit_tag "Search TMDb", class: 'btn btn-primary' %>
   <% end %>
 
-<% end %>
 
 <table class="table table-striped col-md-12" id="movies">
   <thead>
