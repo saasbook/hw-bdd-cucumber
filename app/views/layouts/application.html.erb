@@ -12,6 +12,11 @@
     <%# These classes come from the Bootstrap CSS framework. %>
     <nav class="navbar navbar-expand-lg bg-primary text-white mb-3">
       <h1 class="title">Rotten Potatoes!</h1>
+      <% if current_moviegoer %>
+        <td>Current User: <%= current_moviegoer.full_name %></td>
+        <%= image_tag(current_moviegoer.avatar_url) %>
+        <%= button_to 'Logout', destroy_moviegoer_session_path, data: {turbo: "false"}, method: :delete %>
+      <% end %>
     </nav>
     <div class="container">
       <%# Render "flash" messages in our application. This loads _flash.erb %>

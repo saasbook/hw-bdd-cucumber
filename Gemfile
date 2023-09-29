@@ -31,6 +31,8 @@ group :development, :test do
 
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.3.6'
+
+  gem 'dotenv-rails'
 end
 
 group :production do
@@ -47,3 +49,11 @@ group :test do
 end
 
 gem "themoviedb-api", "~> 1.4"
+
+gem "omniauth", "~> 2.0"
+
+gem "devise", "~> 4.9"
+
+gem "omniauth-google-oauth2", "~> 1.1"
+
+gem "omniauth-rails_csrf_protection", "~> 1.0"
