@@ -14,6 +14,14 @@
     </div>
   <% end %>
   <%= submit_tag 'Refresh', id: 'ratings_submit', class: 'btn btn-primary' %>
+
+  <%# search bar TMDb %>
+  <%= form_tag search_tmdb_path do %>
+    <th>Search TMDb for a movie</th>
+    <%= text_field_tag(:search_terms, nil, placeholder: 'Search Terms') %>
+    <%= submit_tag "Search TMDb", class: 'btn btn-primary' %>
+  <% end %>
+
 <% end %>
 
 <table class="table table-striped col-md-12" id="movies">
@@ -55,9 +63,9 @@
   <%= link_to 'Add new movie', new_movie_path, class: 'btn btn-primary' %>
 
   <%# search bar TMDb %>
-  <%= form_tag search_tmdb_path do %>
-    <th>Search TMDb for a movie</th>
-    <%= text_field_tag(:search_terms, nil, placeholder: 'Search Terms') %>
-    <%= submit_tag "Search TMDb", class: 'btn btn-primary' %>
-  <% end %>
+  <%# <%= form_tag search_tmdb_path do %>
+    <%# <th>Search TMDb for a movie</th> %>
+    <%# <%= text_field_tag(:search_terms, nil, placeholder: 'Search Terms') %>
+    <%# <%= submit_tag "Search TMDb", class: 'btn btn-primary' %>
+  <%# <% end %>
 </div>

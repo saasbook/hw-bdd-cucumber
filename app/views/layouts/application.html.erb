@@ -12,12 +12,17 @@
     <%# These classes come from the Bootstrap CSS framework. %>
     <nav class="navbar navbar-expand-lg bg-primary text-white mb-3">
       <h1 class="title">Rotten Potatoes!</h1>
-      <% if current_moviegoer %>
-        <td>Current User: <%= current_moviegoer.full_name %></td>
-        <%= image_tag(current_moviegoer.avatar_url) %>
-        <%= button_to 'Logout', destroy_moviegoer_session_path, data: {turbo: "false"}, method: :delete %>
-      <% end %>
+
+      <div class="ml-auto d-flex align-items-center">
+          <%# Display logged in user %>
+          <% if current_moviegoer %>
+              <%= image_tag(current_moviegoer.avatar_url, style: "border-radius: 50%; width: 50px; height: 50px;") %>
+              <%= content_tag(:div, current_moviegoer.full_name, style: "padding: 0 10px;") %>
+              <%= button_to 'Logout', destroy_moviegoer_session_path, data: {turbo: "false"}, method: :delete %>
+          <% end %>
+      </div>
     </nav>
+
     <div class="container">
       <%# Render "flash" messages in our application. This loads _flash.erb %>
       <%= render 'layouts/flash' %>
