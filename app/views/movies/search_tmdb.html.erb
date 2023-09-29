@@ -1,41 +1,57 @@
-
-<!--  This file is app/views/movies/index.html.erb -->
+<!-- This file is app/views/movies/index.html.erb -->
 <%# display title name %>
 <h3>Search Results for <%= @title %></h3>
 <h4>Add Movie by Results </h4>
-<%#  Part 2: Start here... %>
+<%# Part 2: Start here... %>
 
-<!-- Display the movie poster -->
-    <% if @poster_url.present? %>
-      <div class="form-group">
-        <img src="<%= @poster_url %>" alt="Movie Poster" class="img-fluid" />
-      </div>
-    <% end %>
-
-<div class="d-flex justify-content-between align-items-center">
-  <%= form_tag movies_path do %>
-    <div class="form-group">
-      <%= label :movie,:title, "Title : " %>
-      <%= text_field :movie,:title,value: @title,class: 'form-control' %>
+<div class="d-flex">
+  <!-- Display the movie poster on the left -->
+  <% if @poster_url.present? %>
+    <div class="poster-container">
+      <img src="<%= @poster_url %>" alt="Movie Poster" class="img-fluid poster-image" />
     </div>
-
-    <div class="form-group">
-      <%= label :movie,:rating, "Rating : " %>
-      <%= text_field :movie,:rating,value: @rating ,class: 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= label :movie, :release_date, 'Released On', class: 'col-form-label' %>
-      <%= date_select :movie, :release_date, {selected: @release_date}, class: 'form-control col-2 d-inline' %>
-    </div>
-
-    <div class="form-group">
-      <%= label :movie,:description, "Description : " %>
-      <%= text_area :movie,:description,value: @description,class: 'form-control', rows: 4,cols:100 %>
-    </div>
-
-    <%= submit_tag "ADD", class: 'btn btn-primary' %>
-    <%= link_to 'Cancel', movies_path, class: 'btn btn-secondary' %>
   <% end %>
 
+  <!-- Movie Info on the right -->
+  <div class="movie-info">
+    <%= form_tag movies_path do %>
+      <div class="form-group">
+        <%= label :movie, :title, "Title : " %>
+        <%= text_field :movie, :title, value: @title, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= label :movie, :rating, "Rating : " %>
+        <%= text_field :movie, :rating, value: @rating, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= label :movie, :release_date, 'Released On', class: 'col-form-label' %>
+        <%= date_select :movie, :release_date, { selected: @release_date }, class: 'form-control col-2 d-inline' %>
+      </div>
+
+      <div class="form-group">
+        <%= label :movie, :description, "Description : " %>
+        <%= text_area :movie, :description, value: @description, class: 'form-control', rows: 4, cols: 100 %>
+      </div>
+
+      <%= submit_tag "ADD", class: 'btn btn-primary' %>
+      <%= link_to 'Cancel', movies_path, class: 'btn btn-secondary' %>
+    <% end %>
+  </div>
 </div>
+
+<style>
+  /* CSS for positioning the poster and movie info */
+  .poster-container {
+    margin-right: 20px; /* Adjust the spacing between the poster and movie info */
+  }
+
+  .poster-image {
+    max-width: 80%; /* Adjust the maximum width of the poster image */
+  }
+
+  .movie-info {
+    flex: 1; /* Allow movie info to expand and take remaining space */
+  }
+</style>

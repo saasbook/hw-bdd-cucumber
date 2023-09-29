@@ -3,25 +3,36 @@
 
 <%#  Part 2: Start here... %>
 
-<%= form_tag movies_path, method: :get, id: 'ratings_form' do %>
-  <%= hidden_field_tag 'sort_by', @sort_by %>
-  Include:
-  <% @all_ratings.each do |rating| %>
-    <div class="form-check  form-check-inline">
-      <%= label_tag "ratings[#{rating}]", rating, class: 'form-check-label' %>
-      <%= check_box_tag "ratings[#{rating}]", '1', (@ratings_to_show_hash.include?(rating)),
-        class: 'form-check-input' %>
-    </div>
+<div class="d-flex justify-content-between align-items-center">
+  <%= form_tag movies_path, method: :get, id: 'ratings_form', class: 'mr-3' do %>
+    <%= hidden_field_tag 'sort_by', @sort_by %>
+    Include:
+    <% @all_ratings.each do |rating| %>
+      <div class="form-check form-check-inline">
+        <%= label_tag "ratings[#{rating}]", rating, class: 'form-check-label' %>
+        <%= check_box_tag "ratings[#{rating}]", '1', (@ratings_to_show_hash.include?(rating)),
+          class: 'form-check-input' %>
+      </div>
+    <% end %>
+    <%= submit_tag 'Refresh', id: 'ratings_submit', class: 'btn btn-primary' %>
   <% end %>
-  <%= submit_tag 'Refresh', id: 'ratings_submit', class: 'btn btn-primary' %>
+
+  <%= form_tag search_tmdb_path, class: 'ml-3' do %>
+  <div class="form-row align-items-center">
+    Search TMDb for a movie
+    <div class="col-auto">
+      <%= text_field_tag(:search_terms, nil, class: 'form-control', placeholder: 'Search Terms') %>
+    </div>
+    <div class="col-auto">
+      <%= submit_tag "Search TMDb", class: 'btn btn-primary' %>
+    </div>
+  </div>
+
 <% end %>
 
-  <%# search bar TMDb %>
-  <%= form_tag search_tmdb_path do %>
-    <th>Search TMDb for a movie</th>
-    <%= text_field_tag(:search_terms, nil, placeholder: 'Search Terms') %>
-    <%= submit_tag "Search TMDb", class: 'btn btn-primary' %>
-  <% end %>
+
+</div>
+
 
 
 <table class="table table-striped col-md-12" id="movies">
