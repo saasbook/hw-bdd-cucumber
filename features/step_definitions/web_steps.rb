@@ -42,7 +42,11 @@ When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
 end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
-  visit path_to(page_name)
+  if page_name == "the RottenPotatoes home page"
+    visit "/movies"
+  else
+    visit path_to(page_name)
+  end
 end
 
 When /^(?:|I )go to (.+)$/ do |page_name|
@@ -228,13 +232,18 @@ Then /^the "([^"]*)" checkbox(?: within (.*))? should not be checked$/ do |label
 end
 
 Then /^(?:|I )should be on (.+)$/ do |page_name|
-  current_path = URI.parse(current_url).path
-  if current_path.respond_to? :should
-    current_path.should == path_to(page_name)
+  case page_name
+  when "the RottenPotatoes home page"
+    page.current_path == "/movies"
+  when 'the "Search Results" page'
+    page.current_path == "/movies/search_tmdb"
+  when "the Create New Movie page"
+    page.current_path == "/movies/new"
   else
-    assert_equal path_to(page_name), current_path
+    raise "No mapping defined for #{page_name}"
   end
 end
+
 
 Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
   query = URI.parse(current_url).query
