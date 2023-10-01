@@ -25,9 +25,10 @@
 </div>
 
 
+<div class="reviews" style="border: 2px solid #000; padding: 10px; padding-top: 10px; margin-top: 10px;">
 <h3>Reviews:</h3>
-<div class="reviews">
   <% @movie.reviews.each do |review|  %>
+    <hr>
     <div class="ml-auto d-flex align-items-center">
       <%= image_tag(review.moviegoer.avatar_url, style: "border-radius: 50%; width: 50px; height: 50px;") %>
       <%= content_tag(:div, review.moviegoer.full_name, style: "padding: 0 10px;") %>
@@ -38,8 +39,6 @@
 
       <%end%>
     </div>
-    
-    <!-- Move the comment here, below other elements -->
     <div class="comment" style="padding-left: 60px; padding-bottom: 20px;">
   <%= review.comments %>
 </div>

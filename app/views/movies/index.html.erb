@@ -3,7 +3,7 @@
 
 <%#  Part 2: Start here... %>
 
-<div class="d-flex justify-content-between align-items-center">
+<div class="d-flex justify-content-between align-items-center" style="margin-bottom: 20px;">
   <%= form_tag movies_path, method: :get, id: 'ratings_form', class: 'mr-3' do %>
     <%= hidden_field_tag 'sort_by', @sort_by %>
     Include:
