@@ -1,6 +1,9 @@
 Rottenpotatoes::Application.routes.draw do
   # devise_for :moviegoers
-  resources :movies
+  resources :movies do
+    resources :reviews
+  end
+  
   # map '/' to be a redirect to '/movies'
   root :to => redirect('/movies')
   get '/movies/:movie', to: 'movies#show'

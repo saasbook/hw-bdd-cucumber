@@ -21,4 +21,29 @@
   <%= link_to 'Edit', edit_movie_path(@movie), class: 'btn btn-primary col-2' %>
   <%= link_to 'Delete', movie_path(@movie), 'data-method': 'delete', 'data-confirm': 'Are you sure?', class: 'btn btn-danger col-2' %>
   <%= link_to 'Back to movie list', movies_path, class: 'btn btn-primary col-2' %>
+  <%= link_to 'Add Review', new_movie_review_path(@movie), class: 'btn btn-primary col-2' %>
 </div>
+
+
+<h3>Reviews:</h3>
+<div class="reviews">
+  <% @movie.reviews.each do |review|  %>
+    <div class="ml-auto d-flex align-items-center">
+      <%= image_tag(review.moviegoer.avatar_url, style: "border-radius: 50%; width: 50px; height: 50px;") %>
+      <%= content_tag(:div, review.moviegoer.full_name, style: "padding: 0 10px;") %>
+      <%= review.potatoes %>/5 potatoes
+      <% if current_moviegoer.id == review.moviegoer.id%>
+        <%= link_to 'Edit', edit_movie_review_path(@movie,review.id), class: 'btn btn-primary col-1' %>
+        <%= link_to 'Delete', movie_review_path(@movie, review.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+
+      <%end%>
+    </div>
+    
+    <!-- Move the comment here, below other elements -->
+    <div class="comment" style="padding-left: 60px; padding-bottom: 20px;">
+  <%= review.comments %>
+</div>
+
+  <% end %>
+</div>
+

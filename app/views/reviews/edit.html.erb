@@ -1,0 +1,9 @@
+<h1> Update Review for <%= @movie.title %> </h1>
+
+<%= form_tag movie_review_path(@movie,@review),method: :put, class: 'form' do %>
+  <label class="col-form-label"> How many potatoes:</label>
+  <%= select_tag 'review[potatoes]', options_for_select(1..5, selected: @review.potatoes), class: 'form-control' %>
+  <label class="col-form-label"> Comments:</label>
+  <%= text_area_tag 'review[comments]', @review.comments, class: 'form-control', rows: 4 %>
+  <%= submit_tag 'Update Review', :class => 'btn btn-success' %>
+<% end %>
