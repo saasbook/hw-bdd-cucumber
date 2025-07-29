@@ -1,0 +1,35 @@
+<p style="color: green"><%= notice %></p>
+
+<%= form_tag movies_path, method: :get, id: 'ratings_form', local: true do %>
+  Include:
+  <% @all_ratings.each do |rating| %>
+    <div class="form-check  form-check-inline">
+      <%= check_box_tag "ratings[#{rating}]", "1", @ratings_to_show.include?(rating), class: 'form-check-input' %>
+      <%= label_tag "ratings[#{rating}]", rating, class: 'form-check-label' %>
+    </div>
+  <% end %>
+  <div class="form-check  form-check-inline">
+    <label class="form-label me-2" for="sort_by">Sort by:</label>
+    <%= select_tag :sort_by,
+                   options_for_select([["Title", "title"],
+                                       ["Release date", "release_date"]],
+                                       @sort_by),
+                   id:    "sort_by",
+                   class: "form-select d-inline w-auto" %>
+  </div>
+  <%= submit_tag 'Refresh', id: 'ratings_submit', class: 'btn btn-primary' %>
+  
+<% end %>
+
+<h1>Movies</h1>
+
+<div id="movies">
+  <% @movies.each do |movie| %>
+    <%= render movie %>
+    <p>
+      <%= link_to "Show this movie", movie %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New movie", new_movie_path %>
