@@ -30,7 +30,7 @@ match a step such as: "Then I should see the following movies:".
 That would detract from the goal of BDD to convey the behavioral intent of the user story. To fix this, complete the 
 step definition that will match steps of the form: `Then I should see all the movies` in `movie_steps.rb`.
 
->[!TIP]
+> [!TIP]
 > Consider counting the number of rows in the HTML table to implement these steps. If you have computed the `rows` 
 > variable as the number of table rows, you can use the assertion `expect(rows).to eq value` to fail the test in case 
 > the values don't match.

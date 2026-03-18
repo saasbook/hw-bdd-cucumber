@@ -23,18 +23,18 @@ assignment.
 > [!NOTE]
 > Your directory must be named `rottenpotatoes`.
 
-## Setup Your Working Environment
+## Set Up Your Working Environment
 
 Now that you've got the code, you should confirm that you can get RottenPotatoes up and running as we have 
 delivered it. These are the same set of steps we take on most new Rails applications.
 
-**NOTE THIS WILL BE EDITED AFTER THE REPO / RAILS APP IS UPSCALED AND CLEANED UP**
 ```sh
 cd rottenpotatoes
-bundle config set without 'production'
+docker built -t rottenpotatoes:latest .
+docker run -it -v "$(pwd):/app" -p 3000:3000 rottenpotatoes"
 bundle install
 bundle exec rails db:setup # shorthand for db:create, db:migrate, db:seed
-bundle exec rails server -b 0.0.0.0
+bundle exec rails server -b 0.0.0.0 -p 3000
 ```
 
 ## Parts
